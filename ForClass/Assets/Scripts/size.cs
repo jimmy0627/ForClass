@@ -5,10 +5,13 @@ public class size : MonoBehaviour
 {
     void Start()
     {
+        //不同資料型態在記憶體中佔據的位元組數量
         Debug.Log("size of int: " + sizeof(int));
         Debug.Log("size of char: " + sizeof(char));
         Debug.Log("size of float: " + sizeof(float));
         Debug.Log("size of double: " + sizeof(double));
+
+        //不同資料型態在加法上的不同
         int number1 = 4, number2 = 5;
         char char1 = '4';
         string string1 = "4";

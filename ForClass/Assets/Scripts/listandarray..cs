@@ -21,7 +21,12 @@ public class listandarray : MonoBehaviour
         }
         Debug.Log("list before remove: " + test);
 
-        //輸出被移除3後的list
+        //檢查刪除前後1是否存在
+        Debug.Log("Whether the list contains 1 before remove: " + list.Contains(1));
+        list.Remove(1);
+        Debug.Log("Whether the list contains 1 after remove: " + list.Contains(1));
+
+        //輸出被移除3後的list，了解Remove的刪除優先級
         list.Remove(3);
         string test2 = "";
         for (int i = 0; i < list.Count; i++)
@@ -30,12 +35,7 @@ public class listandarray : MonoBehaviour
         }
         Debug.Log("list after remove: " + test2);
 
-        Debug.Log("Whether the list contains 1 before remove: " + list.Contains(1));
-        list.Remove(1);
-        Debug.Log("Whether the list contains 1 after remove: " + list.Contains(1));
-
-
-
+        //完全清空list
         list.Clear();
         Debug.Log(list.Count);
     }
