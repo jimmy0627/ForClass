@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,19 +14,23 @@ public class listandarray : MonoBehaviour
         list.Add(2);
         list.Add(3);
         Debug.Log("list " + list);
+        Debug.Log("array" + array);
+
         //輸出list
+        /*
         string test = "";
         foreach (int item in list)
         {
             test += item + " ";
         }
         Debug.Log("list before remove: " + test);
+        */
 
         //檢查刪除前後1是否存在
         Debug.Log("Whether the list contains 1 before remove: " + list.Contains(1));
         list.Remove(1);
         Debug.Log("Whether the list contains 1 after remove: " + list.Contains(1));
-
+        /*
         //輸出被移除3後的list，了解Remove的刪除優先級
         list.Remove(3);
         string test2 = "";
@@ -34,6 +39,7 @@ public class listandarray : MonoBehaviour
             test2 += list[i] + " ";
         }
         Debug.Log("list after remove: " + test2);
+        */
 
         //完全清空list
         list.Clear();

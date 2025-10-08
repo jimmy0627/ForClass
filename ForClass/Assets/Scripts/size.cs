@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class size : MonoBehaviour
@@ -10,6 +10,7 @@ public class size : MonoBehaviour
         Debug.Log("size of char: " + sizeof(char));
         Debug.Log("size of float: " + sizeof(float));
         Debug.Log("size of double: " + sizeof(double));
+        
 
         //不同資料型態在加法上的不同
         int number1 = 4, number2 = 5;
