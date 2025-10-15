@@ -11,6 +11,7 @@ public class If_and_else : MonoBehaviour
         //判斷式會輸出布林值
         Debug.Log("a>b is : " + (a > b));
         Debug.Log("a<b is : " + (a < b));
+        Debug.Log("a=b is :" + (a == b));
 
         //利用判斷是製作一個刪選器
         if (a > b)

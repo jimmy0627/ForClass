@@ -16,7 +16,7 @@ public class size : MonoBehaviour
         int number1 = 4, number2 = 5;
         char char1 = '4';
         string string1 = "4";
-        Debug.Log("int + int= "+number1 + number2);
+        Debug.Log(number1 + number2);
         Debug.Log(number1 + char1);
         Debug.Log("int + string=" +number1 + string1);
     }
