@@ -131,8 +131,9 @@ GameObject:
   - component: {fileID: 1704062412}
   - component: {fileID: 1704062411}
   - component: {fileID: 1704062414}
+  - component: {fileID: 1704062415}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   horspeed: 2
   verspeed: 2
-  rotatespeed: 45
+  rotatespeed: 35
   movement:
     m_Name: Movement
     m_Type: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 1D Axis
-      m_Id: 911f9bc1-9e11-4a1d-a1df-0afdce051c17
+      m_Id: 1f8f297e-9d00-4ae6-887d-aead3f922e14
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
@@ -170,7 +171,7 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 4
     - m_Name: negative
-      m_Id: 8231e40f-e40a-4ad7-af69-e79041bdffbc
+      m_Id: db5f092f-9d8e-424e-b05a-7c830b8e4c2a
       m_Path: <Keyboard>/q
       m_Interactions: 
       m_Processors: 
@@ -178,7 +179,7 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 8
     - m_Name: positive
-      m_Id: 8ac07625-597f-43c7-bb6c-cbdcc6e8f5ba
+      m_Id: afff145e-4ad5-4fc2-af5b-324e330320c7
       m_Path: <Keyboard>/e
       m_Interactions: 
       m_Processors: 
@@ -286,6 +287,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1704062415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704062410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d11f5cb04cf7b48836929c1e3c3b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  bullet: {fileID: 8155421365219208207, guid: f04ed7bf4952bf34e8c159ec020c57a9, type: 3}
 --- !u!1 &2077598672
 GameObject:
   m_ObjectHideFlags: 0

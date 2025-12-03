@@ -5,7 +5,7 @@ public class ranadposition : MonoBehaviour
 {
 
     [SerializeField] GameObject Ball;
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
 /*
     float timer = 0f;
     float speed = 3f;

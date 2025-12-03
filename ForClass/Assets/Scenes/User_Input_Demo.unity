@@ -7346,7 +7346,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 2D Vector
-      m_Id: 9b6cd4ba-ec08-4616-acd7-1023b1d57a0d
+      m_Id: c9a221a7-8ebf-4973-89c0-f9bc58e9560b
       m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
@@ -7354,7 +7354,7 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 4
     - m_Name: up
-      m_Id: 0ba7d08f-5537-44d7-8b89-4d417cbd3321
+      m_Id: 9145b4a2-7ce1-411b-b4dd-69d3d4a561e7
       m_Path: <Keyboard>/w
       m_Interactions: 
       m_Processors: 
@@ -7362,24 +7362,24 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 8
     - m_Name: down
-      m_Id: f953e184-e8de-4dec-bc51-2c4deba4a06c
-      m_Path: <Keyboard>/s
+      m_Id: 9a776309-f092-4e1e-8a16-29fff8be35b1
+      m_Path: 
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
     - m_Name: left
-      m_Id: 28e843a5-8887-4271-ab89-9f55bc5facc9
-      m_Path: <Keyboard>/a
+      m_Id: 8d25ae05-ceee-4029-ac1f-b47ed2d5d236
+      m_Path: 
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
     - m_Name: right
-      m_Id: ab084f62-7492-4c06-a127-e131dcc51696
-      m_Path: <Keyboard>/d
+      m_Id: bf8670e5-70d0-4f17-a2dd-2684d04b2bd7
+      m_Path: 
       m_Interactions: 
       m_Processors: 
       m_Groups: 

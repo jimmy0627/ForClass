@@ -15,13 +15,18 @@ public class SpaceShip_Movement : MonoBehaviour
     }
     void Update()
     {
+        //rotate
         float inputvalue=movement.ReadValue<float>();
+        rb.AddTorque(inputvalue*-1);
+
+        
+        //平移
         float verticalInput = Input.GetAxis("Vertical"); 
         float horizontalInput = Input.GetAxis("Horizontal"); 
-        Vector3 forwardMovement = transform.up * verticalInput * verspeed;
-        Vector3 strafeMovement = transform.right * horizontalInput * horspeed;
-        Vector3 dir = (forwardMovement + strafeMovement).normalized;
-        rb.AddTorque(inputvalue*-1); ;
+        Vector3 Vertical = transform.up * verticalInput * verspeed;
+        Vector3 Horizontal = transform.right * horizontalInput * horspeed;
+        Vector3 dir = (Vertical + Horizontal).normalized;
+        
         rb.AddForce(dir,ForceMode2D.Force);
     }
 }
