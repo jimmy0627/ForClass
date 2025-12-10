@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Scripts_storge : MonoBehaviour
@@ -15,19 +16,49 @@ public class Scripts_storge : MonoBehaviour
         // 初始化時設定為起始節點
         currentNode = StartingNode;
     }
+    
     public string GetNextMove()
     {
         try
         {
-            return currentNode.DialogueTexts[currentpos++];
+            if (currentpos<currentNode.DialogueTexts.Count){
+                return currentNode.DialogueTexts[currentpos++];
+            }
+            else if(currentNode.Options.Count>0)
+            {
+                
+                GameObject panel=transform.Find("OptionPanel").gameObject;
+                panel.SetActive(true);
+                Debug.Log(currentNode.Options[0].OptionText);
+                panel.transform.Find("Option 1").GetComponentInChildren<TextMeshProUGUI>().text=currentNode.Options[0].OptionText;
+                panel.transform.Find("Option 2").GetComponentInChildren<TextMeshProUGUI>().text=currentNode.Options[1].OptionText;
+                return null;
+            }
+            else
+            {
+                return null;
+            }
         }
-        catch (ArgumentOutOfRangeException e)
+        catch (System.Exception)
         {
-            Debug.Log(e);
-            return null;
+            throw;
         }
+
+
     }
 
+    public void setcurrentnode(DialogueNode node)
+    {
+        currentNode=node;
+    }
+    public DialogueNode GetDialogueNode()
+    {
+        return currentNode;
+    }
+    public void Resetpos()
+    {
+        currentpos=0;
+    }
     public Sprite GetImage(int indexofimage)
     {
         return BackgroundImages[indexofimage];

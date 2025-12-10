@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -18,10 +19,7 @@ public class ChangeText : MonoBehaviour
         try
         {
             List<string> script=raw_script.Split(" ").ToList();//將原始指令轉換成list
-            foreach (var item in script)
-            {
-                Debug.Log(item);
-            }
+            
             Color newcolor;
             Image temp;
             switch (int.Parse(script[0])) //設定誰在說話
@@ -33,12 +31,10 @@ public class ChangeText : MonoBehaviour
                     Speakername.GetComponentInChildren<TextMeshProUGUI>().color=newcolor;
 
                     ColorUtility.TryParseHtmlString("#B5BDC3", out newcolor);//設定名牌顏色
-                    Speakername.GetComponent<Image>().color=newcolor;
                     temp = Speakername.transform.Find("halo").GetComponent<Image>();
-                    newcolor.a=0.16f;
                     temp.color=newcolor;
-
-                    
+                    newcolor.a=0.16f;
+                    Speakername.GetComponent<Image>().color=newcolor;
                     break;
                 case 1:
                     Speakername.GetComponentInChildren<TextMeshProUGUI>().text="凜";//設定名子
@@ -46,13 +42,13 @@ public class ChangeText : MonoBehaviour
                     Speakername.GetComponentInChildren<TextMeshProUGUI>().color=newcolor;
 
                     ColorUtility.TryParseHtmlString("#FFD7E0", out newcolor); //設定名牌顏色
-                    Speakername.GetComponent<Image>().color=newcolor;
                     temp = Speakername.transform.Find("halo").GetComponent<Image>();
-                    newcolor.a=0.16f;
+                    
                     temp.color=newcolor;
-
-
+                    newcolor.a=0.16f;
+                    Speakername.GetComponent<Image>().color=newcolor;
                     break;
+                
                 default:
                     Speakername.GetComponentInChildren<TextMeshProUGUI>().text=" ";
 
@@ -76,6 +72,13 @@ public class ChangeText : MonoBehaviour
     }
     void Start()
     {
+        
+        StartCoroutine(delaystart(0.1f));
+        
+    }
+    IEnumerator delaystart(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         onclicktext();
     }
 }

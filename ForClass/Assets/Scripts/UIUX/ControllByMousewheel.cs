@@ -8,14 +8,12 @@ public class ControllByMousewheel : MonoBehaviour
     {
         movement.Enable();
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         int value=(int)movement.ReadValue<float>();
-        if (value!=0)
+        if (value==-1)
         {
-            Debug.Log(value);
+            transform.GetComponent<ChangeText>().onclicktext();
         }
     }
 }
