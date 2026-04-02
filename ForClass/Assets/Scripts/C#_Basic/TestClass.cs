@@ -8,6 +8,7 @@ public class TestClass //繪製一個藍圖
     public int b;
     private string secret = "This is a Secret";
 
+
     //儲存方法
     public int add(int a, int b)
     {
