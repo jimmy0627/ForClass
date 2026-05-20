@@ -1,12 +1,14 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using static Maze_Array_Gen;
+using System.Collections;
+using NavMeshPlus.Components;
 
 public class Recursive_Backtrack : MonoBehaviour
 {
     public Maze_Array_Gen mazeGen;
     public Maze_Render Render;
+    public NavMeshSurface navMeshSurface;
     private (int, int)[] directions = { (0,1), (0,-1), (1,0), (-1,0) }; // top, bottom, right, left
     void Start()
     {
@@ -87,5 +89,6 @@ public class Recursive_Backtrack : MonoBehaviour
         }
         return neighbors;
     }
+
 }
 
